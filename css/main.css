@@ -98,6 +98,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+  .content-wrapper {  /*to apply to all content-wrappers*/
+    width: 80%;
+    margin: 50px 0; /*How did they pick this???*/
+  }
+
 /* -------------------- Base Header - Footer Styles -------------------- */
 /*These header and footer styles are the same for all pages and includes nav*/
 
@@ -109,36 +114,66 @@ footer {
   flex-flow: row wrap;  /*Anywhere you want content to wrap*/
 }
 
+/*Header Styles*/
+
+header {
+  padding: 15px 0;
+}
+
 header .content-wrapper {  /*Why do we need to specify flexbox for the rest of these if header and footer are already set to it?*/
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.header.divider {
+  width: 100%;
+  height: 1px;  /*How get this and what does it do?*/
+  margin: 10px 0 20px 0; /*How get this and what does it do?*/
 }
 
 header nav {
+  width:  60%;  /*Space the nav takes up*/
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
 }
 
-header ul {
+header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
 
-header .header-divider {  /*Why not have this in solution?*/
-
+footer {
+  flex-direction: column; /*How know to add this in????*/
 }
 
-footer .content-wrapper {  /*Why not have this in solution?*/
-
+footer p {
+  margin: 0;  /*Why?*/
 }
+
+footer .content-wrapper {  
+  width: 55%;
+  margin: 50px 0;/*Why do we need to put this again if we assigned it to all content-wrappers?*/
+}
+
+footer .social {  /*They have something differnt here for contact*/
+  padding: 45px 0;
+}
+
+/*They have this instead of footer .social*/
+/*
+footer. contact {
+  margin-bottom 50px;
+*/
 
 footer .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -148,6 +183,11 @@ footer .social-icons p {
   align-items: center;
 }
 
+footer .copyright {
+  margin: 20px 0;
+}
+
+
 
 /* -------------------- Mobile Styles - Homepage -------------------- */
 /*CSS specific to mobile first design*/
@@ -155,10 +195,15 @@ footer .social-icons p {
 /*My biggest question right now is how to know which sections to assign flexbox to - there is no pattern when compared to last project*/
 
 /*Hero Area*/
+
 .hero-area {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+}
+/*They don't use this*/
+.content-wrapper h1 {  /*My attempt at accomplishing padding the text but not the image*/
+  padding: 50px 0;
 }
 
 /*Aside*/
@@ -169,6 +214,11 @@ aside {
   flex-flow: row wrap;
 }
 
+/*They don't use this*/
+aside .content-wrapper {
+  padding: 25px 0 45px 0;  /*The top padding is smaller than the bottom padding*/
+}
+
 /*Features*/
 .features {
   display: flex;
@@ -176,18 +226,57 @@ aside {
   flex-flow: row wrap;
 }
 
+.features h2 {
+  margin-bottom: 60px;
+}
+
+.features article {
+  width:  63%; 
+  margin:  30px 0;  
+}
+
 .features .feature-items {
+  /*width: 55%;*/  /*If you put this here, the feature articles are not centered*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  text-align: center;
 }
+
+/*This removes space between p icon and p text*/
+.features p {
+  margin: 0;
+}
+
+/*Solution does not have these
+.fontawesome-icon {
+  padding: 25px 0;
+}
+
+.features-item-description {
+  padding 35px 0;
+  }*/
 
 /*Reviews*/
 .reviews {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;  /*Why no align-items center?*/
+}
+
+/*I tried to addng space around sections with content-wrapper.  They used headings*/ 
+/*.reviews .content-wrapper {
+  padding: 40px 0;
+}*/
+
+.reviews h2 {
+  margin-bottom: 40px 0;
+}
+
+.reviews h3 {
+  width: 50%;
+  margin: 20px 0; /*Space between pic above and text below*/
 }
 
 
@@ -210,6 +299,9 @@ aside {
   flex-flow: row wrap;
 }
 
+.contact-section p {
+  margin: 0;
+}
 
 
 /* -------------------- Mobile Styles - FAQ -------------------- */
@@ -224,10 +316,15 @@ aside {
 }
 
 .faq .content-wrapper { /*Why is content-wrapper included here but not in other similar style sections?????*/
+ margin: 50px 0 0 0; /*Why does this section have a margin but others like it on other pages do not?*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.faq h2 {
+  margin-bottom:  40px;  /*Don't know how they knew to do this*/
 }
 
 /* ==========================================================================
