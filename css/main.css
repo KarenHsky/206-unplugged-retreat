@@ -168,7 +168,7 @@ footer .content-wrapper {
 /*They have this instead of footer .social*/
 
 footer .contact {
-  margin-bottom 50px;
+  margin-bottom: 50px;
 }
 
 footer .social-icons {
@@ -316,7 +316,7 @@ aside .content-wrapper {
 }
 
 .faq .content-wrapper { /*Why is content-wrapper included here but not in other similar style sections?????*/
- margin: 50px 0 0 0; /*Why does this section have a margin but others like it on other pages do not?*/
+  margin: 50px 0 0 0; /*Why does this section have a margin but others like it on other pages do not?*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,230 +420,315 @@ aside .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
-   /*For Tablets*/
+/*******************************************************************/
+   /**For Tablets*/
+/*******************************************************************/
+
 @media only screen and (min-width: 768px) {
 
-.content-wrapper {
-  max-width: 640px;
-  margin: 100px 0;  /*ASK:  why this included*/
-}
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;  /*ASK:  why this included*/
+  }
 
-/************HOMEPAGE****************/
+  /************HOMEPAGE****************/
 
-/*Header*/
-header {
-  display: flex; /*ASK:  why not listed in solution*/
-  justify-content: center; /*Centers the sections in the header*/
-  padding:  33px 0;
-}
+  /*Header*/
+  header {
+    display: flex; /*ASK:  why not listed in solution*/
+    justify-content: center; /*Centers the sections in the header*/
+    padding:  33px 0;
+  }
 
-header .content-wrapper {
-  width: 100%;
-  display: flex;  /*ASK:  why not listed again*/
-  justify-content: space-between; /*Pushes the two header sections apart*/
-}
+  header .content-wrapper {
+    width: 100%;
+    display: flex;  /*ASK:  why not listed again*/
+    justify-content: space-between; /*Pushes the two header sections apart*/
+  }
 
-header nav {
-  width: 20%;
-}
+  header nav {
+    width: 20%;
+  }
 
-header nav ul {
-  display: flex; /*ASK:  why not included?*/
-  justify-content: space-between;
-  padding: 0 20px 0 0; /*Solution doesn't have, but I want it spaced out more*/
-}
+  header nav ul {
+    display: flex; /*ASK:  why not included?*/
+    justify-content: space-between;
+    padding: 0 20px 0 0; /*Solution doesn't have, but I want it spaced out more*/
+  }
 
-.header.divider {
-  display: none;
-}
+  .header.divider {
+    display: none;
+  }
 
-/*Hero Area*/
-/*Don't have to modify .content-wrapper bc only a picture? Height of Hero area needs to be modified somehow.  */
+  /*Hero Area*/
+  /*Don't have to modify .content-wrapper bc only a picture? Height of Hero area needs to be modified somehow.  */
 
-.hero-area h1 { /*Solution doesn't have this*/
-  width:  70%;
-}
+  .hero-area h1 { /*Solution doesn't have this*/
+    width:  70%;
+  }
 
-/*Aside*/
-aside .content-wrapper {  /*ASK:  Why do we modify some .content-wrappers but not others?*/
-  margin: 50px 0;  /*Space between Hero section and Aside*/
-  display: flex;
-  justify-content: space-between; /*Pushes the two sections further apart*/
-  flex-flow: row wrap;
-}
+  /*Aside*/
+  aside .content-wrapper {  /*ASK:  Why do we modify some .content-wrappers but not others?*/
+    margin: 50px 0;  /*Space between Hero section and Aside*/
+    display: flex;
+    justify-content: space-between; /*Pushes the two sections further apart*/
+    flex-flow: row wrap;
+  }
 
-aside .content-wrapper .form-description,
-aside .content-wrapper .form {  /*ASK:  Why this notation?  Do you have to say content-wrapper?*/
-  width: 40%;
-  margin: 0;
-}
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {  /*ASK:  Why this notation?  Do you have to say content-wrapper?*/
+    width: 40%;
+    margin: 0;
+  }
 
-/*Features*/
+  /*Features*/
 
-/*My solution*/
-/*.features .feature-items {  /*They have article here; I would do this.  Can't use content-wrapper bc h2 gets moved*/
- /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}*/
+  /*My solution*/
+  /*.features .feature-items {  /*They have article here; I would do this.  Can't use content-wrapper bc h2 gets moved*/
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }*/
 
-/*.features article {  /*This is the only way I can move these fields together*/
-/* width: 35%;
-}
+  /*.features article {  /*This is the only way I can move these fields together*/
+  /* width: 35%;
+  }
 
-.features .features-item-description {
-  /*width:  35%; */
- /* margin:  0px 30px;  
-}*/
+  .features .features-item-description {
+    /*width:  35%; */
+  /* margin:  0px 30px;  
+  }*/
 
-/*Their solution - they use flex-basis*/
-.features article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-  flex-basis: 50%;
-}
+  /*Their solution - they use flex-basis*/
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
 
-.features .features-item-description {
-  width: 50%;
-}
+  .features .features-item-description {
+    width: 50%;
+  }
 
 
-/*Reviews*/
-.reviews article {
-  display: flex;
-  justify-content: space-between;
-}
+  /*Reviews*/
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.reviews article div {
-  width: 40%;
-}
+  .reviews article div {
+    width: 40%;
+  }
 
-/*Footer*/
-footer .content-wrapper {
-  width: 80%;
-  margin: 100px 0; /*ASK:  WHY???*/
-}
+  /*Footer*/
+  footer .content-wrapper {
+    width: 80%;
+    margin: 100px 0; /*ASK:  WHY???*/
+  }
 
-.footer-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start; /*They have center, but this keep headers in line*/
-  text-align: center;
-}
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /*They have center, but this keep headers in line*/
+    text-align: center;
+  }
 
-footer .footer-contact {
-  width: 30%;
-}
+  footer .footer-contact {
+    width: 30%;
+  }
 
-footer .social {
-  width: 30%;
-}
+  footer .social {
+    width: 30%;
+  }
 
-footer .contact {
-  margin-bottom: 0;
-}
-
-footer .copyright {
-  width: 30%;
-}
-
-/*Thier solution - I don't agree with it*/
-/*  footer .contact {
+  footer .contact {
     margin-bottom: 0;
   }
-  
+
   footer .copyright {
-    width: 100%;
+    width: 30%;
+    text-align: center;
+  }
+
+  /*Thier solution - I don't agree with it*/
+  /*  footer .contact {
+      margin-bottom: 0;
+    }
+    
+    footer .copyright {
+      width: 100%;
+    }*/
+    
+
+
+  /************ABOUT****************/
+
+  /*Mission*/
+  .mission-content {
+    padding-top: 20px;  /*Space between Hero section and Aside; I originally used margin*/
+    display: flex;
+    justify-content: space-between; /*Pushes the two sections further apart*/
+    flex-flow: row wrap; /*Solution does not have*/
+  }
+
+  .mission-content p {
+  width: 45%;
+  margin: 0;
+  }
+
+
+  /*Map*/
+
+
+  /*Contact*/
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between; /*Pushes the two sections further apart*/
+    align-items: flex-start; /*This vertically aligns sections at the top - titles are in line*/
+    /*flex-flow: row wrap;*/ /*Not in solution*/
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+    }
+
+  .contact-content div { /*They don't have this, but I think it moves the sections closer together*/
+    width: 40%;
+  }
+
+
+  /************FAQ****************/
+
+  /*FAQ*/
+  .faq .content-wrapper {
+    margin: 20px 0;  /*Space between Hero section and Aside*/ /*Solution does not have*/
+    display: flex; /*ASK: they don't include*/
+    justify-content: space-between; /*Pushes the two sections further apart*/
+    /*flex-flow: row wrap;*/ /*Solution does not have*/
+  }
+
+  .faq-content {
+  /*width: 40%;  /*ASK:  why do they use flex-basis instead of width?*/
+  flex-basis: 40%;
+  /*margin: 0;*/
+  }
+
+  .faq h2 {
+    width: 100%;  /*What does this do????**/
+  }
+}
+
+
+/*******************************************************************/
+   /**For Desktop*/
+/*******************************************************************/
+@media only screen and (min-width: 1200px) {
+    
+  .content-wrapper {
+    max-width: 940px;
+    /*margin: 100px 0;  /*ASK:  why this included for tablet but not desktop*/
+  }
+  
+  /************HOMEPAGE****************/
+  /*Don't have to repeat code if the same in Tablet*/
+  
+  /*Hero Area*/
+
+  .hero-area h1 { 
+    width:  70%;
+  }
+  
+  /*Aside*/
+  aside .content-wrapper {  
+    justify-content: space-around; /*Notice that text is no longer flush with margin*/
+  }
+  
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {  
+    width: 40%;
+  }
+  
+  /*Features*/
+  
+  .feature h2 {
+    width: 70%;
+  }
+
+  .features article {
+/*  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;  /*ASK:  Why column and not row wrap - they seem to do the same thing*/
+    flex-basis: 33%;
+  }
+  
+  /*.features .features-item-description {
+    width: 70%;
   }*/
   
-
-
-/************ABOUT****************/
-
-/*Mission*/
-.mission-content {
-  padding-top: 20px;  /*Space between Hero section and Aside; I originally used margin*/
-  display: flex;
-  justify-content: space-between; /*Pushes the two sections further apart*/
-  flex-flow: row wrap; /*Solution does not have*/
-}
-
-.mission-content p {
- width: 45%;
- margin: 0;
-}
-
-
-/*Map*/
-
-
-/*Contact*/
-
-.contact-content {
-  display: flex;
-  justify-content: space-between; /*Pushes the two sections further apart*/
-  align-items: flex-start; /*This vertically aligns sections at the top - titles are in line*/
-  /*flex-flow: row wrap;*/ /*Not in solution*/
- }
-
-.contact-section .content-wrapper h2 {
-  width: 80%;
-  }
-
-.contact-content div { /*They don't have this, but I think it moves the sections closer together*/
-  width: 40%;*/
-}
-
-
-/************FAQ****************/
-
-/*FAQ*/
-.faq .content-wrapper {
-  margin: 20px 0;  /*Space between Hero section and Aside*/ /*Solution does not have*/
-  display: flex; /*ASK: they don't include*/
-  justify-content: space-between; /*Pushes the two sections further apart*/
-  /*flex-flow: row wrap;*/ /*Solution does not have*/
-}
-
-.faq-content {
- /*width: 40%;  /*ASK:  why do they use flex-basis instead of width?*/
- flex-basis: 40%;
- /*margin: 0;*/
-}
-
-.faq h2 {
-  width: 100%;  /*What does this do????**/
-}
-
-
-
-
-
-
-
- 
-
- 
-
-   /*For Desktop*/
-   @media only screen and (min-width: 1200px) {
-    
-    .features article {
-      width: 18%; 
-      margin: 30px 60px;  
-    }
   
-    .features .feature-items {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: row wrap;
-      text-align: center;
-   }  
+  /*Reviews*/
+  .reviews article div {
+    width: 50%;  /*Make wider*/
   }
+  
+  /*Footer - their solution doesn't inlclude this*/
+  footer .content-wrapper {
+    width: 90%;  /*Make wider*/
+    margin: 100px 0; 
+  }
+  
+  
+  
+  
+  /************ABOUT****************/
+  
+  /*Mission*/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 90%;
+  }
+  
+  /*.contact-section .content-wrapper h2 {
+    margin-bottom: 100px;
+  }*/
+ 
+
+  
+  /************FAQ****************/
+  
+  /*FAQ*/
+  .faq .content-wrapper h1 {
+    width: 100%;
+  }
+
+ .faq-content {
+   width: 40%;  /*ASK:  why do they use flex-basis instead of width?*/
+   flex-basis: 45%;
+   margin: 0;
+  }
+  
+  .faq h2 {
+    width: 100%;  /*What does this do????**/
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
