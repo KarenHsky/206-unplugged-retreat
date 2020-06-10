@@ -108,6 +108,7 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     text-align: left;
+    color: #e2e3ed; /*Bc all font is white*/
   }
 
   ul,
@@ -120,24 +121,23 @@ textarea {
     text-decoration: none;
   }
 
-  h1 {
-    font-size: 3.75em;
-  }
-
+/*Don't put h1 here bc it may change with screen size?*/
 
   h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.25em /*ASK how they got their sizes - I grabbed the size from Photoshop and converted based on 1em=16px*/
+    font-size: 1.875em; /*Use MOBILE FIRST to calculate font sizes!*/
+    font-weight: normal;  /*They used 500*/
   }
 
   h3,
   h4 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.875em;
+    font-size: 1.125em;
+    font-weight: normal;
   }
 
   p {
-    font-size: 1em;
+    font-size: 0.875em;
     line-height: 1.5em; /*ASK:  HOW DID THEY GET THIS?*/
   }
 
@@ -159,6 +159,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;  /*Anywhere you want content to wrap*/
+  background-color: #202322;
 }
 
 /*Header Styles*/
@@ -179,6 +180,7 @@ header .content-wrapper {  /*Why do we need to specify flexbox for the rest of t
   width: 100%;
   height: 1px;  /*How get this and what does it do?*/
   margin: 10px 0 20px 0; /*How get this and what does it do?*/
+  background: #3a3a3a; 
 }
 
 header nav {
@@ -187,6 +189,9 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  font-weight: bold; /*They use 700*/
+  text-transform: uppercase;
+  font-size: 1.125em;
 }
 
 header nav ul {
@@ -195,8 +200,13 @@ header nav ul {
   justify-content: space-around;
 }
 
+header nav ul li {
+  font-size: 1.125em; /*Why is this included here?*/
+}
+
 footer {
   flex-direction: column; /*How know to add this in????*/
+  text-align: center;
 }
 
 footer p {
@@ -248,9 +258,12 @@ footer .copyright {
   justify-content: center;
   flex-flow: row wrap;
 }
-/*They don't use this*/
-.content-wrapper h1 {  /*My attempt at accomplishing padding the text but not the image*/
-  padding: 50px 0;
+/*ASK:  I put h1 up in the general area - they put it here.  Which? Might be here bc differs with screen size*/
+.hero-area h1 {  
+  font-size: 2.25em;
+  font-weight: normal;  
+  line-height: 1.2;  /*ASK:  How did they get this?*/
+  /*padding: 50px 0; /*My attempt at accomplishing padding the text but not the image*/
 }
 
 /*Aside*/
@@ -259,11 +272,39 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 /*They don't use this*/
-aside .content-wrapper {
+/*aside .content-wrapper {
   padding: 25px 0 45px 0;  /*The top padding is smaller than the bottom padding*/
+/*}*/
+
+/*They use this*/
+aside .form{
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /*Features*/
@@ -288,12 +329,12 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  text-align: center;
 }
 
 /*This removes space between p icon and p text*/
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 /*Solution does not have these
@@ -310,6 +351,7 @@ aside .content-wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;  /*Why no align-items center?*/
+  background-color: #2a423a;
 }
 
 /*I tried to addng space around sections with content-wrapper.  They used headings*/ 
@@ -319,6 +361,7 @@ aside .content-wrapper {
 
 .reviews h2 {
   margin-bottom: 40px 0;
+  line-height: 1; /*How did they get this?*/
 }
 
 .reviews h3 {
@@ -336,6 +379,7 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 /*Contact*/
@@ -344,6 +388,7 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .contact-section p {
@@ -360,6 +405,7 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 .faq .content-wrapper { /*Why is content-wrapper included here but not in other similar style sections?????*/
@@ -372,11 +418,17 @@ aside .content-wrapper {
 
 .faq h2 {
   margin-bottom:  40px;  /*Don't know how they knew to do this*/
+  line-height: 1; /*How do they get this?*/
 }
 
 .faq-content {
   margin-bottom: 50px;
 }
+
+.faq-content h4 {
+  line-height: 1.333; /*ASK:  How  get this?*/
+}
+
 
 /* ==========================================================================
    Helper classes
@@ -460,6 +512,7 @@ aside .content-wrapper {
 .clearfix:after {
   clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -687,7 +740,7 @@ aside .content-wrapper {
   /*Hero Area*/
 
   .hero-area h1 { 
-    width:  70%;
+    width:  80%;
   }
   
   /*Aside*/
