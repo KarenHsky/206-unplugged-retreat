@@ -105,10 +105,10 @@ textarea {
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
     text-align: left;
-    color: #e2e3ed; /*Bc all font is white*/
+    color: #e2e3ed; /*Put here bc all font is white*/
   }
 
   ul,
@@ -121,7 +121,7 @@ textarea {
     text-decoration: none;
   }
 
-/*Don't put h1 here bc it may change with screen size?*/
+/*Don't put h1 here bc it changes with screen size, i.e., is not universal*/
 
   h2 {
     font-family: 'Poppins', sans-serif;
@@ -134,32 +134,42 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125em;
     font-weight: normal;
+    margin: 20px 0; /*What is this for?*/
   }
 
   p {
     font-size: 0.875em;
-    line-height: 1.5em; /*ASK:  HOW DID THEY GET THIS?*/
+    line-height: 1.285em; /*ASK:  HOW DID THEY GET THIS?*/
   }
 
+  img {
+    width: 100%;
+  }
+
+  figure {
+    margin: 0;
+  }
   address {
     font-style: normal;
   }
 
  .content-wrapper {  /*to apply to all content-wrappers*/
-    width: 80%;
-    margin: 50px 0; /*How did they pick this???*/
+    width: 90%;
+    margin: 40px 0; /*How did they pick this???*/
   }
+
+
 
 /* -------------------- Base Header - Footer Styles -------------------- */
 /*These header and footer styles are the same for all pages and includes nav*/
 
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;  /*Anywhere you want content to wrap*/
-  background-color: #202322;
 }
 
 /*Header Styles*/
@@ -176,28 +186,37 @@ header .content-wrapper {  /*Why do we need to specify flexbox for the rest of t
   flex-flow: row wrap;
 }
 
-.header.divider {
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.header-divider {
+  background: #3a3a3a;
   width: 100%;
   height: 1px;  /*How get this and what does it do?*/
   margin: 10px 0 20px 0; /*How get this and what does it do?*/
-  background: #3a3a3a; 
 }
 
 header nav {
   width:  60%;  /*Space the nav takes up*/
+  font-size: 1.125em;
+  font-weight: bold; /*They use 700*/
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  font-weight: bold; /*They use 700*/
-  text-transform: uppercase;
-  font-size: 1.125em;
 }
 
 header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  padding: 0; /*ASK:  Why did I have to add this for padding and margin to get alignment correct?  Solution doesn't have it */
+  margin: 0;
 }
 
 header nav ul li {
@@ -217,12 +236,6 @@ footer .content-wrapper {
   width: 55%;
   margin: 50px 0;/*Make footer margins smaller so content is closer together?*/
 }
-
-/*footer .social {  /*They have something differnt here for contact*/
-  /*padding: 45px 0;
-}*/
-
-/*They have this instead of footer .social*/
 
 footer .contact {
   margin-bottom: 50px;
@@ -254,25 +267,29 @@ footer .copyright {
 /*Hero Area*/
 
 .hero-area {
+  background: url(../img/jake-melara-30679-unsplash.jpg) center no-repeat #333;
+  background-size: cover;
+  min-height: 500px; /*Measured from PS*/
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
+
 /*ASK:  I put h1 up in the general area - they put it here.  Which? Might be here bc differs with screen size*/
 .hero-area h1 {  
   font-size: 2.25em;
   font-weight: normal;  
   line-height: 1.2;  /*ASK:  How did they get this?*/
-  /*padding: 50px 0; /*My attempt at accomplishing padding the text but not the image*/
+  margin: 0; /*Solution doesn't have this*/
 }
 
 /*Aside*/
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
 
 /*They don't use this*/
@@ -281,7 +298,7 @@ aside {
 /*}*/
 
 /*They use this*/
-aside .form{
+aside .form {
   margin-top: 30px;
 }
 
@@ -309,6 +326,8 @@ input[type=button] {
 
 /*Features*/
 .features {
+  background: url(../img/rawpixel-800820-unsplash1.jpg) center no-repeat #333;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -348,10 +367,11 @@ input[type=button] {
 
 /*Reviews*/
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;  /*Why no align-items center?*/
-  background-color: #2a423a;
+
 }
 
 /*I tried to addng space around sections with content-wrapper.  They used headings*/ 
@@ -360,12 +380,12 @@ input[type=button] {
 }*/
 
 .reviews h2 {
-  margin-bottom: 40px 0;
+  margin-bottom: 40px;
   line-height: 1; /*How did they get this?*/
 }
 
 .reviews h3 {
-  width: 50%;
+  width: 55%;
   margin: 20px 0; /*Space between pic above and text below*/
 }
 
@@ -375,20 +395,20 @@ input[type=button] {
 
 /*Mission*/
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
 
 /*Contact*/
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #2a423a;
 }
 
 .contact-section p {
@@ -401,11 +421,11 @@ input[type=button] {
 
 /*FAQ*/
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
 
 .faq .content-wrapper { /*Why is content-wrapper included here but not in other similar style sections?????*/
@@ -531,19 +551,33 @@ input[type=button] {
     margin: 100px 0;  /*ASK:  why this included*/
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+  h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+  }
+
   /************HOMEPAGE****************/
 
   /*Header*/
   header {
-    display: flex; /*ASK:  why not listed in solution*/
-    justify-content: center; /*Centers the sections in the header*/
+    /*display: flex; /*ASK:  why not listed in solution*/
+    justify-content: space-around; /*Centers the sections in the header*/
     padding:  33px 0;
   }
 
   header .content-wrapper {
     width: 100%;
-    display: flex;  /*ASK:  why not listed again*/
+    /*display: flex;  /*ASK:  why not listed again*/
     justify-content: space-between; /*Pushes the two header sections apart*/
+  }
+
+  header figure {
+    width: 30%;
   }
 
   header nav {
@@ -551,20 +585,28 @@ input[type=button] {
   }
 
   header nav ul {
-    display: flex; /*ASK:  why not included?*/
+    /*display: flex; /*ASK:  why not included?*/
     justify-content: space-between;
-    padding: 0 20px 0 0; /*Solution doesn't have, but I want it spaced out more*/
   }
 
-  .header.divider {
+  /*Could pad li if wanted to spread FAQ and About out more*/
+
+  .header-divider {
     display: none;
   }
 
   /*Hero Area*/
   /*Don't have to modify .content-wrapper bc only a picture? Height of Hero area needs to be modified somehow.  */
 
+  .hero-area {
+    min-height: 600px;
+  }
+
   .hero-area h1 { /*Solution doesn't have this*/
-    width:  70%;
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+    /*width:  70%; Don't need this when adjust font size and line height*/ 
   }
 
   /*Aside*/
@@ -600,6 +642,10 @@ input[type=button] {
   /* margin:  0px 30px;  
   }*/
 
+  .features h2 {
+    margin-bottom: 20px;
+  }
+
   /*Their solution - they use flex-basis*/
   .features article {
     display: flex;
@@ -610,7 +656,7 @@ input[type=button] {
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
 
 
@@ -620,24 +666,38 @@ input[type=button] {
     justify-content: space-between;
   }
 
-  .reviews article div {
-    width: 40%;
+  .reviews h2 {
+    width: 85%;
   }
 
-  /*Footer*/
+  .reviews article div 
+  .reviews article figure {
+    width: 49%;
+  }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
+
+  .reviews article div  { /*The solution doesn't have this*/
+    padding: 0 0 0 20px;
+  }
+
+  /*Footer ---my solution is different bc I can't get theirs to work*/
   footer .content-wrapper {
     width: 80%;
-    margin: 100px 0; /*ASK:  WHY???*/
+    margin: 100px 0; /*space between review section*/
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: flex-start; /*They have center, but this keep headers in line*/
     text-align: center;
   }
 
-  footer .footer-contact {
+  footer .contact {
     width: 30%;
   }
 
@@ -654,30 +714,51 @@ input[type=button] {
     text-align: center;
   }
 
-  /*Thier solution - I don't agree with it*/
-  /*  footer .contact {
-      margin-bottom: 0;
-    }
-    
-    footer .copyright {
-      width: 100%;
-    }*/
-    
+/*Their solution*/
+/*footer .content-wrapper {
+  width: 65%;
+  margin: 100px 0;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+footer .contact {
+  margin-bottom: 0;
+}
+
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+footer p {
+    line-height: 1.285;
+}
+
+footer .copyright {
+  width: 100%;
+}*/
 
 
   /************ABOUT****************/
 
   /*Mission*/
   .mission-content {
-    padding-top: 20px;  /*Space between Hero section and Aside; I originally used margin*/
     display: flex;
     justify-content: space-between; /*Pushes the two sections further apart*/
-    flex-flow: row wrap; /*Solution does not have*/
+    align-items: center;
+    /*flex-flow: row wrap; /*Solution does not have - instead has align-items center*/
+    padding-top: 20px;  /*Space between Hero section and Aside; I originally used margin*/
   }
 
   .mission-content p {
   width: 45%;
-  margin: 0;
+  margin: 0; /*Not in solution but I felt like it had too much space*/
   }
 
 
@@ -685,6 +766,10 @@ input[type=button] {
 
 
   /*Contact*/
+ 
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+    }
 
   .contact-content {
     display: flex;
@@ -693,28 +778,27 @@ input[type=button] {
     /*flex-flow: row wrap;*/ /*Not in solution*/
   }
 
-  .contact-section .content-wrapper h2 {
-    width: 80%;
-    }
-
-  .contact-content div { /*They don't have this, but I think it moves the sections closer together*/
-    width: 40%;
+  .contact-content h4 {
+    font-size: 1.5em;
   }
+
+  /*.contact-content div { /*They don't have this, but I think it moves the sections closer together*/
+   /* width: 40%;
+  }*/
 
 
   /************FAQ****************/
 
   /*FAQ*/
   .faq .content-wrapper {
-    margin: 20px 0;  /*Space between Hero section and Aside*/ /*Solution does not have*/
-    display: flex; /*ASK: they don't include*/
+    /* display: flex; /*ASK: they don't include*/
     justify-content: space-between; /*Pushes the two sections further apart*/
     /*flex-flow: row wrap;*/ /*Solution does not have*/
   }
 
   .faq-content {
   /*width: 40%;  /*ASK:  why do they use flex-basis instead of width?*/
-  flex-basis: 40%;
+  flex-basis: 45%;
   /*margin: 0;*/
   }
 
@@ -729,17 +813,39 @@ input[type=button] {
 /*******************************************************************/
 @media only screen and (min-width: 1200px) {
     
-  .content-wrapper {
-    max-width: 940px;
-    /*margin: 100px 0;  /*ASK:  why this included for tablet but not desktop*/
+   header {
+    padding: 15px 0;
   }
   
+  .hero-area {
+    min-height: 775px;
+  }
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
+  }
+
   /************HOMEPAGE****************/
   /*Don't have to repeat code if the same in Tablet*/
   
   /*Hero Area*/
 
   .hero-area h1 { 
+    font-size: 3.75em;
     width:  80%;
   }
   
@@ -750,13 +856,17 @@ input[type=button] {
   
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {  
-    width: 40%;
+    width: 30%;
+  }
+
+  .form-description p {
+    font-size: 1.125em;
   }
   
   /*Features*/
   
   .feature h2 {
-    width: 70%;
+    width: 90%;
   }
 
   .features article {
@@ -771,18 +881,26 @@ input[type=button] {
     width: 70%;
   }*/
   
-  
+    
   /*Reviews*/
   .reviews article div {
-    width: 50%;  /*Make wider*/
+    width: 49%;  
   }
+
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+
   
-  /*Footer - their solution doesn't inlclude this*/
-  footer .content-wrapper {
+  /*Footer*/
+  /*footer .content-wrapper {
     width: 90%;  /*Make wider*/
-    margin: 100px 0; 
-  }
+    /*margin: 100px 0; 
+  }*/
   
+  footer h4 {
+    font-size: 1.875em;
+  }
   
   
   
@@ -792,6 +910,11 @@ input[type=button] {
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 90%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
   
   /*.contact-section .content-wrapper h2 {
@@ -801,30 +924,30 @@ input[type=button] {
 
   
   /************FAQ****************/
-  
+  /*Looks like they changed their code - CHECK*/
+
   /*FAQ*/
-  .faq .content-wrapper h1 {
+  /*.faq .content-wrapper h1 {
     width: 100%;
   }
 
  .faq-content {
    width: 40%;  /*ASK:  why do they use flex-basis instead of width?*/
-   flex-basis: 45%;
+   /*flex-basis: 45%;
    margin: 0;
-  }
+  }*/
   
   .faq h2 {
     width: 100%;  /*What does this do????**/
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+      font-size: 1.125em;
+      line-height: 1;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
