@@ -415,6 +415,23 @@ input[type=button] {
   margin: 0;
 }
 
+.map figure {
+  /*width: 100%; /*Shouldn't be needed bc should auto resize based on browser width*/
+  height: 0; /*Padding give the element the height that we need*/
+  padding-bottom: 80%; /*Maintain aspect ration.  Height/weight in embed code; Placing iframe into this container - 80% creates enough space*/
+  overflow: hidden; /*The child element cannot exceed the parent element's width and height*/
+  position: relative; /*Needed to set iframe position to aboslute in iframe css.  An element is positioned relative to its normal spot on the page - you can adjust it to the top, bottom, left, right without interrupting the flow of the other elements on the page*/
+}
+
+.map iframe {
+  width: 100%; /*iframe should fill 100% of parent div*/
+  height: 100%; /*iframe should fill 100% of parent div*/
+  position: absolute; /*Makes sure iframe will show up even thought height=0 in div.  An element - like the map iframe - will be positioned relative to the nearest parent element (the map figure).  Map can shrink and expand without interrupting the flow of the other elements*/
+  top: 0; /*  Flush with top of div*/
+  left: 0; /*Flush with conatiner div*/
+}
+
+
 
 /* -------------------- Mobile Styles - FAQ -------------------- */
 /*CSS specific to mobile first design*/
