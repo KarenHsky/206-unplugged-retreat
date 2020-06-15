@@ -778,10 +778,12 @@ footer .copyright {
   margin: 0; /*Not in solution but I felt like it had too much space*/
   }
 
-
   /*Map*/
-
-
+  .map figure {
+    padding-bottom: 45%; /*Maintain aspect ration.  Height/weight in embed code; Placing iframe into this container - 80% creates enough space*/
+  }
+  
+  
   /*Contact*/
  
   .contact-section .content-wrapper h2 {
@@ -938,7 +940,9 @@ footer .copyright {
     margin-bottom: 100px;
   }*/
  
-
+  .map figure {
+    padding-bottom: 35%; /*Maintain aspect ration.  Height/weight in embed code; Placing iframe into this container - 80% creates enough space*/
+  }
   
   /************FAQ****************/
   /*Looks like they changed their code - CHECK*/
