@@ -356,6 +356,12 @@ input[type=button] {
   text-align: center;
 }
 
+/*Adds space between p icon and p text, adjust size of icons*/
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
+}
+
 /*Solution does not have these
 .fontawesome-icon {
   padding: 25px 0;
