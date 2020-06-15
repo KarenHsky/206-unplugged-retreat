@@ -251,6 +251,10 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #527158; /*Background color of each p element*/
+  border-radius: 50%; /*Makes it a circle*/
+  width: 40px; /*Width of each p element*/
+  height: 40px; /*Height of each p element*/
 }
 
 footer .copyright {
